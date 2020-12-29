@@ -39,20 +39,11 @@
                                     <segment title="20%"/>
                                 </segments>
                                 <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="L1m-IC-KIR"/>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="CTf-ar-nb7"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S1Q-gc-M1p" userLabel="Bill Amount Text Field">
-                                <rect key="frame" x="260" y="160" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="MqX-YT-5jU"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvR-tN-rZX" userLabel="Tip Label">
-                                <rect key="frame" x="275" y="259" width="73" height="21"/>
+                                <rect key="frame" x="260" y="259" width="88" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -66,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Lr-Da-Fub" userLabel="Total Label">
-                                <rect key="frame" x="275" y="477" width="73" height="21"/>
+                                <rect key="frame" x="262" y="476" width="84" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -78,28 +69,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
-                                    <action selector="onClickResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpP-o5-G8n"/>
+                                    <action selector="onClickResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1e-KO-EjI"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S1Q-gc-M1p" userLabel="Bill Amount Text Field">
+                                <rect key="frame" x="240" y="154" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="ltq-K5-nxS"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="z2r-76-knu" appends="YES" id="1ib-RB-ugf"/>
+                            <outletCollection property="gestureRecognizers" destination="jmH-YB-zHs" appends="YES" id="rVa-X7-Da9"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="billAmountTextField" destination="S1Q-gc-M1p" id="7eB-ci-M1I"/>
-                        <outlet property="tipControl" destination="6sN-a6-NYD" id="kIY-4b-o8K"/>
-                        <outlet property="tipLabel" destination="pvR-tN-rZX" id="t6I-IH-CaV"/>
-                        <outlet property="totalLabel" destination="6Lr-Da-Fub" id="QO6-Dl-fYx"/>
+                        <outlet property="billAmountTextField" destination="S1Q-gc-M1p" id="Zmw-gp-kLm"/>
+                        <outlet property="tipControl" destination="6sN-a6-NYD" id="Fbt-T3-Pk0"/>
+                        <outlet property="tipPercentageLabel" destination="pvR-tN-rZX" id="YTT-s6-0xF"/>
+                        <outlet property="totalLabel" destination="6Lr-Da-Fub" id="qUN-wx-aZe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="z2r-76-knu">
+                <tapGestureRecognizer id="jmH-YB-zHs">
                     <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="BeX-VO-yLn"/>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="jiY-OR-Pvp"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
